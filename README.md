@@ -1,26 +1,23 @@
 # EduTech
 
-Plataforma educacional interativa com funcionalidades reais de autenticação, quizzes e criação de aulas, desenvolvida em React e Node.js para fins acadêmicos.
+Deve-se rodar o backend em uma janela e o frontend em outra janela, abertos simultaneamente, através do prompt de comando do windows ou através do Node.
 
-## Como rodar
+# Backend
+Acesse o local do arquivo contendo o backend:
 
-### Backend
-```
-cd local-do-backend (instalado em sua máquina)
-npm install
-node server.js
-```
+cd local-do-backend (instalado em sua máquina) npm install node server.js
 
-### Frontend
-```
-cd local-do-frontend (instalado em sua máquina)
-npm install
-npm run dev
-```
+# Front-end
+Acesse o local do arquivo contendo o front end:
+
+cd local-do-frontend (instalado em sua máquina) npm install npm run dev
 
 Acesse via navegador, ex.: http://localhost:5173
 
-## Login de Teste
+# Login de Teste
+E-mail do Professor: professor@edutech.com Senha: 123
+
+Aluno E-mail: aluno@edutech.com Senha: 123
 Aluno: aluno@edutech.com/ 123
 Professor: professor@edutech.com/ 123
 
