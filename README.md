@@ -5,12 +5,14 @@ Deve-se rodar o backend em uma janela e o frontend em outra janela, abertos simu
 # Backend
 Acesse o local do arquivo contendo o backend:
 
-cd local-do-backend (instalado em sua máquina) npm install node server.js
+cd local-do-backend 
+npm install node server.js
 
 # Front-end
 Acesse o local do arquivo contendo o front end:
 
-cd local-do-frontend (instalado em sua máquina) npm install npm run dev
+cd local-do-frontend 
+npm install npm run dev
 
 Acesse via navegador, ex.: http://localhost:5173
 
