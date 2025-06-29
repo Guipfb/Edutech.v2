@@ -1,6 +1,7 @@
 # EduTech
 
 Deve-se rodar o backend em uma janela e o frontend em outra janela, abertos simultaneamente, através do prompt de comando do windows ou através do Node.
+O arquivo também foi enviado em .rar caso seja favorável extrair na máquina para rodar em algum compilador de preferência que aeite o JavaScript.
 
 # Backend
 Acesse o local do arquivo contendo o backend:
