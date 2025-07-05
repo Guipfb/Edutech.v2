@@ -18,10 +18,8 @@ npm install npm run dev
 Acesse via navegador, ex.: http://localhost:5173
 
 # Login de Teste
-E-mail do Professor: professor@edutech.com Senha: 123
+Professor - E-mail: professor@edutech.com Senha: 123
+Aluno - E-mail: aluno@edutech.com Senha: 123
 
-Aluno E-mail: aluno@edutech.com Senha: 123
-Aluno: aluno@edutech.com/ 123
-Professor: professor@edutech.com/ 123
 
 
