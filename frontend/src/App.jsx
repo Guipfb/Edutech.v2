@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function EduTechApp() {
   const [usuario, setUsuario] = useState(null);
@@ -56,6 +57,18 @@ export default function EduTechApp() {
     } catch {
       setErroLogin("Usuário ou senha inválidos.");
     }
+  };
+
+  // Função para sair (limpar estado e voltar para login)
+  const sair = () => {
+    setUsuario(null);
+    setMensagem("");
+    setErroLogin("");
+    setCredenciais({ email: "", senha: "" });
+    setAulas([]);
+    setQuiz([]);
+    setRespostas([]);
+    setNota(null);
   };
 
   useEffect(() => {
@@ -145,8 +158,29 @@ export default function EduTechApp() {
   }
 
   return (
-    <div style={{ ...containerStyle, paddingTop: 32, paddingBottom: 32, alignItems: "flex-start" }}>
+    <div
+      style={{ ...containerStyle, paddingTop: 32, paddingBottom: 32, alignItems: "flex-start" }}
+    >
       <div style={boxStyle}>
+        {/* Botão sair alinhado à direita */}
+        <div style={{ display: "flex", justifyContent: "flex-end" }}>
+          <button
+            onClick={sair}
+            style={{
+              backgroundColor: "#dc2626",
+              color: "#fff",
+              padding: "8px 16px",
+              borderRadius: 6,
+              border: "none",
+              cursor: "pointer",
+              marginBottom: 16,
+              fontWeight: "bold",
+            }}
+          >
+            Sair
+          </button>
+        </div>
+
         <h1 style={{ textAlign: "center" }}>Bem-vindo ao EduTech ({usuario})</h1>
         {mensagem && <p style={successStyle}>{mensagem}</p>}
 
@@ -156,9 +190,9 @@ export default function EduTechApp() {
             <ul>
               {aulas.map((aula) => (
                 <li key={aula.id}>
-                  <a href={aula.link} target="_blank" rel="noreferrer" style={{ color: "#2563eb" }}>
+                  <Link to={aula.link} style={{ color: "#2563eb" }}>
                     {aula.titulo}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -187,7 +221,9 @@ export default function EduTechApp() {
             <button style={buttonStyle} onClick={enviarRespostas}>
               Enviar Quiz
             </button>
-            {nota !== null && <p style={{ marginTop: 12, fontWeight: "bold" }}>Nota final: {nota}</p>}
+            {nota !== null && (
+              <p style={{ marginTop: 12, fontWeight: "bold" }}>Nota final: {nota}</p>
+            )}
           </>
         )}
 
