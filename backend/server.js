@@ -6,11 +6,8 @@ const PORT = 3001;
 app.use(cors());
 app.use(express.json());
 
-// Banco de dados em memória com aulas já inicializadas
-const aulas = [
-  { id: 1, titulo: "Introdução ao EduTech", link: "https://link-da-aula-1.com" },
-  { id: 2, titulo: "Segunda aula legal", link: "https://link-da-aula-2.com" }
-];
+
+const aulas = [];
 
 const quiz = [
   {
@@ -32,20 +29,27 @@ app.get('/', (req, res) => {
   res.send('EduTech está rodando!');
 });
 
-// Rota de login com dois usuários
+// Rota de login com dois usuários (com logs para depuração)
 app.post('/login', (req, res) => {
   const { email, senha } = req.body;
+  
+  // Loga no terminal o que está chegando
+  console.log('POST /login recebido:', { email, senha });
 
   if (email === 'professor@edutech.com' && senha === '123') {
+    console.log('Login bem‑sucedido como professor');
     return res.json({ tipo: 'professor' });
   }
 
   if (email === 'aluno@edutech.com' && senha === '123') {
+    console.log('Login bem‑sucedido como aluno');
     return res.json({ tipo: 'aluno' });
   }
 
+  console.log('Falha no login: usuário ou senha inválidos');
   return res.status(401).send('Usuário ou senha inválidos');
 });
+
 
 // Buscar aulas
 app.get('/aulas', (req, res) => {
