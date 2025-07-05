@@ -1,0 +1,13 @@
+const express = require("express");
+const router = express.Router();
+
+const aulas = [
+  { id: 1, titulo: "Introdução ao EduTech", link: "/aulas/aula1" }
+];
+
+// Rota GET para listar aulas
+router.get("/", (req, res) => {
+  res.json(aulas);
+});
+
+module.exports = router;
