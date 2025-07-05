@@ -19,6 +19,7 @@ Acesse via navegador, ex.: http://localhost:5173
 
 # Login de Teste
 Professor - E-mail: professor@edutech.com Senha: 123
+
 Aluno - E-mail: aluno@edutech.com Senha: 123
 
 
